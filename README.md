@@ -2,6 +2,16 @@
 
 A comprehensive PowerShell-based backup and restore solution with modern GUI interface, real-time progress monitoring, scheduling capabilities, comprehensive logging, and command-line configuration management.
 
+## 📸 Screenshots
+
+### **GUI Interface**
+![GUI Interface](assets/GUI_Screenshot.png)
+*Modern 6-tab GUI with real-time progress monitoring, AWS integration, and comprehensive configuration options*
+
+### **Command Line Interface**
+![CLI Interface](assets/CLI_Screenshot.png)
+*Advanced command-line launcher with configuration management and direct operation options*
+
 ## 🚀 Quick Start
 
 ### **Easiest Way - Just Double-Click!**
@@ -43,13 +53,13 @@ Enhanced-Backup-Manager/
 
 ## ✨ Enhanced Features (v2.1)
 
-- **Professional 6-tab GUI interface** with intuitive navigation
+- **Professional 6-tab GUI interface** with intuitive navigation *(see GUI screenshot above)*
 - **Real-time progress monitoring** with animated progress bars
 - **AWS integration** with automatic bucket and profile discovery
 - **Background operations** with cancel capability
 - **Multi-level logging** with real-time monitoring
 - **Scheduled backup** support via Windows Task Scheduler
-- **Command-line configuration management** with review and update options
+- **Command-line configuration management** with review and update options *(see CLI screenshot above)*
 
 ## 📋 Prerequisites
 
@@ -78,12 +88,14 @@ Enhanced-Backup-Manager/
 # Double-click this file - no technical knowledge needed
 Quick-Launch-GUI.bat
 ```
+*Launches the modern GUI interface shown in the GUI screenshot above*
 
 ### **For Advanced Users**
 ```batch
 # Full menu with configuration management
 Launch-BackupManager.bat
 ```
+*Opens the advanced command-line interface shown in the CLI screenshot above*
 
 ### **Launch-BackupManager.bat Menu Options**
 ```
