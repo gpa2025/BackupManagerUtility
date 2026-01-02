@@ -1,0 +1,84 @@
+{
+    "_comment": "Enhanced Backup Manager Configuration Template",
+    "_instructions": "Copy this file to BackupConfig.json and customize for your environment",
+    
+    "UseCompression": false,
+    "ScheduleEnabled": false,
+    "RestoreDestination": "C:\\RestoreDestination",
+    "BackupDestination": "C:\\Backups",
+    "LogFailuresOnly": false,
+    "AWSProfile": "default",
+    "LogLevel": "INFO",
+    "LogFileOperations": true,
+    "ScheduleFrequency": "Daily",
+    "MaxBackupVersions": 5,
+    "ScheduleTime": "02:00",
+    
+    "BackupFolders": [
+        {
+            "_comment": "Example folder configurations - customize these for your needs",
+            "Destination": "Documents",
+            "Source": "C:\\Users\\YourUsername\\Documents",
+            "Enabled": true
+        },
+        {
+            "Destination": "Desktop",
+            "Source": "C:\\Users\\YourUsername\\Desktop",
+            "Enabled": false,
+            "_note": "Desktop often contains many files - consider enabling only if needed"
+        },
+        {
+            "Destination": "Pictures",
+            "Source": "C:\\Users\\YourUsername\\Pictures",
+            "Enabled": true
+        },
+        {
+            "Destination": "Videos",
+            "Source": "C:\\Users\\YourUsername\\Videos",
+            "Enabled": false,
+            "_note": "Videos can be very large - enable with caution"
+        },
+        {
+            "Destination": "Music",
+            "Source": "C:\\Users\\YourUsername\\Music",
+            "Enabled": false
+        },
+        {
+            "Destination": "ProjectFiles",
+            "Source": "C:\\Projects",
+            "Enabled": false,
+            "_note": "Example custom folder - add your own important directories"
+        }
+    ],
+    
+    "LogRetentionDays": 30,
+    "VerifyBackups": true,
+    "S3Bucket": "your-s3-bucket-name",
+    "BackupType": "AWS_S3",
+    
+    "ExcludePatterns": [
+        "*.tmp",
+        "*.log",
+        "*.cache",
+        "Thumbs.db",
+        ".DS_Store",
+        "desktop.ini",
+        "My Music",
+        "My Pictures", 
+        "My Videos",
+        "node_modules",
+        ".git",
+        "__pycache__",
+        "*.iso",
+        "*.vmdk"
+    ],
+    
+    "_configuration_notes": {
+        "LogLevel_options": ["MINIMAL", "INFO", "DETAILED", "ALL"],
+        "BackupType_options": ["AWS_S3", "Local", "Network"],
+        "ScheduleFrequency_options": ["Daily", "Weekly", "Monthly"],
+        "AWS_setup": "Run 'aws configure' to set up your AWS credentials before using",
+        "S3_bucket": "Create an S3 bucket in your AWS account and enter the name above",
+        "restore_destination": "Where files will be restored to - can be local or network path"
+    }
+}

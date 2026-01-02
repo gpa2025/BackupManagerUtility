@@ -1,0 +1,49 @@
+﻿{
+    "UseCompression":  false,
+    "ScheduleEnabled":  false,
+    "RestoreDestination":  "\\\\DXP4800-0E0F\\personal_folder\\WORK",
+    "BackupType":  "Network",
+    "BackupDestination":  "C:\\Backups",
+    "VerifyBackups":  true,
+    "LogFailuresOnly":  false,
+    "AWSProfile":  "default",
+    "LogLevel":  "INFO",
+    "LogFileOperations":  true,
+    "ScheduleFrequency":  "Daily",
+    "MaxBackupVersions":  5,
+    "LogRetentionDays":  30,
+    "BackupFolders":  [
+                          {
+                              "Destination":  "CloudRays",
+                              "Source":  "C:\\CloudRays",
+                              "Enabled":  true
+                          },
+                          {
+                              "Destination":  "Documents",
+                              "Source":  "C:\\Users\\gianpaoa\\Documents",
+                              "Enabled":  true
+                          },
+                          {
+                              "Destination":  "Desktop",
+                              "Source":  "C:\\Users\\gianpaoa\\Desktop",
+                              "Enabled":  true
+                          },
+                          {
+                              "Destination":  "Pictures",
+                              "Source":  "C:\\Users\\gianpaoa\\Pictures",
+                              "Enabled":  true
+                          }
+                      ],
+    "S3Bucket":  "gpahpbackup",
+    "ScheduleTime":  "02:00",
+    "ExcludePatterns":  [
+                            "*.tmp",
+                            "*.log",
+                            "Thumbs.db",
+                            ".DS_Store",
+                            "desktop.ini",
+                            "My Music",
+                            "My Pictures",
+                            "My Videos"
+                        ]
+}

@@ -1,0 +1,64 @@
+# Enhanced Backup Manager - Git Ignore File
+# Protects sensitive configuration and log files from being committed
+
+# Configuration files that may contain sensitive information
+BackupConfig-Personal.json
+BackupConfig-*.json
+BackupConfig.json.bak
+BackupConfig.backup
+*.config
+
+# Log files that may contain sensitive paths or information
+*.log
+*-errors.log
+*-backup.log
+
+# Temporary files
+*.tmp
+*.temp
+~$*
+
+# Windows system files
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# PowerShell execution policy files
+*.ps1.policy
+
+# User-specific settings
+.vscode/settings.json
+.idea/
+
+# Backup directories (if created locally)
+Backups/
+BackupTest/
+TestBackups/
+
+# AWS credentials (just in case)
+.aws/
+credentials
+config
+
+# Any personal or test data
+TestData/
+PersonalFiles/
+MyBackups/
+
+# IDE and editor files
+*.swp
+*.swo
+*~
+
+# Archive files that might contain sensitive data
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# Notes and documentation that might contain sensitive info
+NOTES.txt
+TODO.txt
+CREDENTIALS.txt
+SECRETS.txt

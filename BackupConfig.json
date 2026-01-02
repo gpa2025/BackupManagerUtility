@@ -1,0 +1,57 @@
+﻿{
+    "UseCompression": false,
+    "ScheduleEnabled": false,
+    "RestoreDestination": "C:\\RestoreDestination",
+    "BackupDestination": "C:\\Backups",
+    "LogFailuresOnly": false,
+    "AWSProfile": "default",
+    "LogLevel": "INFO",
+    "LogFileOperations": true,
+    "ScheduleFrequency": "Daily",
+    "MaxBackupVersions": 5,
+    "ScheduleTime": "02:00",
+    "BackupFolders": [
+        {
+            "Destination": "Documents",
+            "Source": "C:\\Users\\YourUsername\\Documents",
+            "Enabled": true
+        },
+        {
+            "Destination": "Desktop",
+            "Source": "C:\\Users\\YourUsername\\Desktop",
+            "Enabled": false
+        },
+        {
+            "Destination": "Pictures",
+            "Source": "C:\\Users\\YourUsername\\Pictures",
+            "Enabled": true
+        },
+        {
+            "Destination": "Videos",
+            "Source": "C:\\Users\\YourUsername\\Videos",
+            "Enabled": false
+        },
+        {
+            "Destination": "Music",
+            "Source": "C:\\Users\\YourUsername\\Music",
+            "Enabled": false
+        }
+    ],
+    "LogRetentionDays": 30,
+    "VerifyBackups": true,
+    "S3Bucket": "your-s3-bucket-name",
+    "BackupType": "AWS_S3",
+    "ExcludePatterns": [
+        "*.tmp",
+        "*.log",
+        "Thumbs.db",
+        ".DS_Store",
+        "desktop.ini",
+        "My Music",
+        "My Pictures",
+        "My Videos",
+        "node_modules",
+        ".git",
+        "__pycache__"
+    ]
+}
