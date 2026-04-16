@@ -18,7 +18,12 @@
 
 # Global configuration and logging
 $script:LogPath = "$env:USERPROFILE\Desktop\BackupManager.log"
-$script:ConfigPath = Join-Path $PSScriptRoot "BackupConfig.json"
+# Config lives in the project root (two levels up from scripts/core/)
+$script:ConfigPath = Join-Path $PSScriptRoot "..\..\BackupConfig.json"
+if (-not (Test-Path $script:ConfigPath)) {
+    # Fallback to same directory as script
+    $script:ConfigPath = Join-Path $PSScriptRoot "BackupConfig.json"
+}
 
 # Logging functions
 function Write-Log {
